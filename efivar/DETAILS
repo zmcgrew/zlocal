@@ -1,0 +1,14 @@
+          MODULE=efivar
+         VERSION=0.21
+          SOURCE=$VERSION.tar.gz
+      SOURCE_URL=https://github.com/vathpela/efivar-devel/archive/
+      SOURCE_VFY=sha256:729af027fb24302db14905f2cc0c3823d78e59d53edcc5527284411999fce2e1
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-devel-$VERSION
+        WEB_SITE=https://github.com/vathpela/efivar-devel
+         ENTERED=20150902
+         UPDATED=20150902
+           SHORT="efivar"
+
+cat << EOF
+efivar
+EOF

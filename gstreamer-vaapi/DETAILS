@@ -1,0 +1,16 @@
+          MODULE=gstreamer-vaapi
+         VERSION=0.6.0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_URL=http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi
+#      SOURCE_VFY=sha256:79b1b5f3f7bcaa8a615202eb5e176121eeb8336960f70687e536ad78dbc7e641
+        WEB_SITE=http://gstreamer.freedesktop.org/modules/gst-plugins-good.html
+         ENTERED=20130115
+         UPDATED=20141221
+           SHORT="additional plugins for Gstreamer 1.x"
+
+cat << EOF
+gst-plugins-good is a set of plug-ins for GStreamer 1.x that have
+good quality code, correct functionality, and a preferred license,
+such as the LGPL.
+EOF

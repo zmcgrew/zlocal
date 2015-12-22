@@ -1,0 +1,18 @@
+          MODULE=mysql-workbench-community
+         VERSION=6.3.4-src
+         SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://dev.mysql.com/get/Downloads/MySQLGUITools
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_VFY=sha256:be47f30c48c04f951a1be9b6496e4d94d5b975d6c693933ba2fa6e96718179d3
+        WEB_SITE=http://www.mysql.com/products/workbench/
+         ENTERED=20100704
+         UPDATED=20151020
+           SHORT="unified visual tool for mysql"
+
+cat << EOF
+MySQL Workbench enables a DBA, developer, or data architect to visually design,
+model, generate, and manage databases. It includes everything a data modeler
+needs for creating complex ER models, forward and reverse engineering, and also
+delivers key features for performing difficult change management and
+documentation tasks that normally require much time and effort.
+EOF

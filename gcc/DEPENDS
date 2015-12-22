@@ -1,0 +1,4 @@
+depends libmpc
+depends binutils
+
+optional_depends "cloog" "--with-cloog" "" "for Graphite Optimizer"

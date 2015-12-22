@@ -1,0 +1,13 @@
+          MODULE=vsqlite++
+         VERSION=0.3.13
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://downloads.sourceforge.net/project/sqlitepp/sqlitepp/$VERSION
+#      SOURCE_VFY=sha256:
+        WEB_SITE=http://gtkmm.org
+         ENTERED=20151023
+         UPDATED=20151023
+           SHORT="C++ bindings for SQLite"
+
+cat << EOF
+C++ bindings for SQLite
+EOF

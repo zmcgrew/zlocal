@@ -1,0 +1,15 @@
+          MODULE=mysql
+         VERSION=5.6.27
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://www.mysql.com/get/Downloads/MySQL-${VERSION%.*}/mysql-$VERSION.tar.gz/from/http://cdn.mysql.com/
+#      SOURCE_VFY=sha256:
+        WEB_SITE=http://www.mysql.com
+         ENTERED=20011114
+         UPDATED=20151020
+           SHORT="A widely used and fast SQL database server"
+
+cat << EOF
+MySQL is a widely used and fast SQL database server. It is a client/
+server implementation that consists of a server daemon (mysqld) and
+many different client programs/libraries.
+EOF

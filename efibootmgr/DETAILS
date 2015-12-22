@@ -1,0 +1,14 @@
+          MODULE=efibootmgr
+         VERSION=0.12
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://github.com/vathpela/efibootmgr-devel/archive/
+      SOURCE_VFY=sha256:4389cc01971a2cf58414ea7c81da7c970e7c4851d0c941b9dd6fdc4bae580653
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-devel-$MODULE-$VERSION
+        WEB_SITE=https://github.com/vathpela/efibootmgr-devel
+         ENTERED=20150902
+         UPDATED=20150902
+           SHORT="efibootmgr"
+
+cat << EOF
+efibootmgr
+EOF

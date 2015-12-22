@@ -1,0 +1,45 @@
+CURDIR="`pwd`" &&
+cd $SOURCE_CACHE &&
+
+if [ "$(arch)" == "x86_64" ]; then
+   bits=x64
+else
+   bits=i586
+fi &&
+
+JDK_ARCHIVE=jdk-$VERSION-linux-$bits.tar.gz &&
+JDK_POLICY=jce_policy-8.zip &&
+
+if ! module_installed ca-certificates; then
+   message "${PROBLEM_COLOR}If the following downloads fail, please make sure you build wget with SSL support and and got ca-certificates installed${DEFAULT_COLOR}"
+fi &&
+
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/$FVERSION/$JDK_ARCHIVE &&
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jce/8/$JDK_POLICY &&
+
+JCE_SHA1_VFY="7d25dcee3e6ef2c984d748a14614b37c18ce3507" &&
+JCE_SHA1_TST=`sha1sum $JDK_POLICY | awk '{print $1}'` &&
+if [ "$JCE_SHA1_VFY" != "$JCE_SHA1_TST" ]; then
+   message "Bad checksum for file $JDK_POLICY: $JCE_SHA1_TST - deleting file" &&
+   rm -f $JDK_POLICY # &&
+   false
+fi &&
+
+if [ "$bits" = i586 ]; then
+   JDK_SHA1_VFY="97cad4209c95d12255ad98cb82a6870b5972f04e"
+else
+   JDK_SHA1_VFY="da1fe118417180c374ba9446f2ea3b4206db2ed6"
+fi &&
+
+JDK_SHA1_TST=`sha1sum $JDK_ARCHIVE | awk '{print $1}'` &&
+if [ "$JDK_SHA1_VFY" != "$JDK_SHA1_TST" ]; then
+   message "Bad checksum for file $JDK_ARCHIVE: $JDK_SHA1_TST - deleting file" &&
+   rm -f $JDK_ARCHIVE &&
+   false
+fi &&
+
+cd $BUILD_DIRECTORY &&
+tar -xzpvf $SOURCE_CACHE/$JDK_ARCHIVE &&
+cd $SOURCE_DIRECTORY/jre/lib/security &&
+unzip $SOURCE_CACHE/$JDK_POLICY &&
+cd "$CURDIR"

@@ -1,0 +1,17 @@
+depends "%MYSQL"
+depends boost
+depends pcre
+depends lua
+depends sqlite
+depends libxml2
+depends libsigc++2
+depends libzip
+depends pango
+depends gtkmm
+depends swig
+depends gdal
+depends tinyxml
+
+optional_depends gettext  "--enable-i18n"     "--disable-i18n"     "for internationalization support"
+optional_depends readline "--enable-readline" "--disable-readline" "to use readline in grtsh"
+optional_depends paramiko ""                  ""                   "for ssh tunnel support"

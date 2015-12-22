@@ -1,0 +1,13 @@
+          MODULE=libvdpau-va-gl
+         VERSION=0.3.4
+          SOURCE=v$VERSION.tar.gz
+      SOURCE_URL=https://github.com/i-rinat/libvdpau-va-gl/archive
+#      SOURCE_VFY=sha256:00b781eea055582820a123c47b62411bdf6aabf4f03dc0568faec55faf9667c9
+        WEB_SITE=http://www.x.org
+         ENTERED=20150910
+         UPDATED=20150910
+           SHORT="va backend for vdpau"
+
+cat << EOF
+Allows vdpau to use libva for video acceleration
+EOF

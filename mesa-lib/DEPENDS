@@ -1,0 +1,18 @@
+depends libxml2
+depends expat
+depends glproto
+depends dri2proto
+depends dri3proto
+depends libdrm
+depends makedepend
+depends libXi
+depends libXdamage
+depends libXt
+depends libXxf86vm
+depends libxshmfence
+depends presentproto
+
+optional_depends "libvdpau" "--enable-vdpau" "--disable-vdpau" "vdpau hw acceleration"
+optional_depends "libXvMC"  "--enable-xvmc"  "--disable-xvmc"  "XvMC hw acceleration"
+optional_depends "llvm"     ""  ""  "llvm is required when building Gallium drivers"
+optional_depends "elfutils" ""  "" "elfutils is required when building radeonsi driver"

@@ -1,0 +1,5 @@
+depends  perl
+depends  readline
+
+optional_depends "openssl" "--with-ssl=/usr" "--without-ssl" "for SSL support"
+optional_depends "systemd" ""           ""              "for systemd style daemon management"
